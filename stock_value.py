@@ -17,15 +17,23 @@ while True:
     if ticker == "exit":
         break
     stock = yf.Ticker(ticker)
-    print(stock.history('3y'))
+    info = sorted([[k,v] for k,v in stock.info.items()])
+    for k,v in info:
+        # print(f'{k} : {v}')
+        if k == "beta":
+            beta = v
     current_stock_price = float(input('Enter current stock price:  '))
-    expected_return = float(input ('Enter the expected return on the S&P 500:  '))
-    beta = float (input ('Enter the beta value:  '))
-    risk_free_rate = float(input ('Enter the current risk free rate. Use the rate of current treasury bills:  '))
+    expected_return = 0.08
+
+    # risk_free_rate = float(input ('Enter the current risk free rate. Use the rate of current treasury bills:  '))
+    for k,v in info:
+        if k == "regularMarketPrice":
+            risk_free_rate = v
     growth_rate = float(input ('Enter the anticipated growth rate:  '))
-    last_dividend = float((input ('Enter the dividend payout for the company:  ')))
+    last_dividend = float(stock.dividends[-1])
     market_cap_rate = risk_free_rate + beta*(expected_return - risk_free_rate)
     valuation = last_dividend/(market_cap_rate - growth_rate)
     judge_stock()
+    print(stock.recommendations)
 
     
