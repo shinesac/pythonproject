@@ -61,14 +61,15 @@ Features included
 
 Suggestions on how to run
 
-1. Download the python file and the csv file.
-2. Run the program in your console/terminal.
-3. Suggestions for stocks: CLX, MSFT, T, DIS (these will produce different results based on error-handling and calculations).
-4. Follow the prompts (enter any number for current stock price).
-5. Add to favorites list by following prompt and view favorities.csv file.
-6. Try entering an invalid stock ticker to test error handling (ie. FJFKLH)
-7. Try not entering a stock in the favorites list by typing "n" and then check the favorites.csv file to see that it did NOT add data. 
-8. Try exiting the program by entering "exit" when prompted.
+1. pip install yfinance
+2. Download the python file and the csv file.
+3. Run the program in your console/terminal.
+4. Suggestions for stocks: CLX, MSFT, T, DIS (these will produce different results based on error-handling and calculations).
+5. Follow the prompts (enter any number for current stock price).
+6. Add to favorites list by following prompt and view favorities.csv file.
+7. Try entering an invalid stock ticker to test error handling (ie. FJFKLH)
+8. Try not entering a stock in the favorites list by typing "n" and then check the favorites.csv file to see that it did NOT add data. 
+9. Try exiting the program by entering "exit" when prompted.
 
 	
 Thank you!, 
