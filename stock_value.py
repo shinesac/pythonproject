@@ -48,6 +48,7 @@ while True:
     current_stock_price = float(input('Enter current stock price:  '))
     expected_return = 0.08
 
+    # need to add error handling for zero division 
     growth_rate = (sum(stock.dividends[str(last_year)]) - sum(stock.dividends[str(last_two_year)]))/sum(stock.dividends[str(last_two_year)])
     last_dividend = float(stock.dividends[-1])
     market_cap_rate = risk_free_rate + beta*(expected_return - risk_free_rate)
@@ -55,25 +56,19 @@ while True:
     judge_stock()
     # need to add error handling for no year, month data
     print(stock.recommendations[str(current_date.strftime('%Y-%m'))])
-    favorite = input('Would you like to add ' + ticker + ' to your favorites list? y/n  ')
+   
     print('Favorites: {}'.format(favorite_list))
 
-    if favorite == 'y':
-        favorite_list.append(ticker)
-        print('Favorites: {}'.format(favorite_list))
-        file = open('favorites.csv', 'a')
-        info = sorted([[k,v] for k,v in stock.info.items()])
-        for k,v in info:
-            file.write(f'{k} : {v}' + "\n")
-        file.close()
-    elif favorite == 'n':
-        pass
-
-
-    view_csv = input('To view in-depth stock data for items in your favorites list, enter "view", otherwise enter "pass":  ')
-    if view_csv == "view":
-       file = open('favorites.csv', 'r') 
-       file.open()
-       file.close()
-    elif view_csv == "pass":
-        pass
+    if ticker not in favorite_list:
+        favorite = input('Would you like to add ' + ticker + ' to your favorites list? y/n  ')
+        if favorite == 'y':
+            favorite_list.append(ticker)
+            print('Favorites: {}'.format(favorite_list))
+            file = open('favorites.csv', 'a')
+            info = sorted([[k,v] for k,v in stock.info.items()])
+            file.write("\n" + ticker + "\n")
+            for k,v in info:
+                file.write(f'{k} : {v}' + "\n")
+            file.close()
+        elif favorite == 'n':
+            pass
