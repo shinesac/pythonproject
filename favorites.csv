@@ -6,14 +6,14 @@ address1 : 1221 Broadway
 algorithm : None
 annualHoldingsTurnover : None
 annualReportExpenseRatio : None
-ask : 215.3
+ask : 216.89
 askSize : 800
 averageDailyVolume10Day : 1815812
 averageVolume : 1406867
 averageVolume10days : 1815812
 beta : 0.254274
 beta3Year : None
-bid : 215.19
+bid : 216.79
 bidSize : 1100
 bookValue : 7.195
 category : None
@@ -23,7 +23,7 @@ companyOfficers : []
 country : United States
 currency : USD
 dateShortInterest : 1602720000
-dayHigh : 216.92
+dayHigh : 217.31
 dayLow : 212.59
 dividendRate : 4.44
 dividendYield : 0.0208
@@ -43,7 +43,7 @@ fiveYearAverageReturn : None
 fiveYearAvgDividendYield : 2.43
 floatShares : 125780639
 forwardEps : 7.9
-forwardPE : 27.269619
+forwardPE : 27.464558
 fromCurrency : None
 fullTimeEmployees : 8800
 fundFamily : None
@@ -65,7 +65,7 @@ logo_url : https://logo.clearbit.com/thecloroxcompany.com
 longBusinessSummary : The Clorox Company manufactures and markets consumer and professional products worldwide. It operates through four segments: Health and Wellness, Household, Lifestyle, and International. The company offers laundry additives, including bleach products under the Clorox brand, as well as Clorox 2 stain fighter and color booster; home care products primarily under the Clorox, Scentiva, Formula 409, Liquid-Plumr, Pine-Sol, S.O.S, and Tilex brands; naturally derived products under the Green Works brand; professional cleaning, disinfecting, and food service products under the CloroxPro, Clorox Healthcare, and Clorox Total 360 brands; professional food service products under the Hidden Valley brand; and vitamins, minerals, and supplement products under the RenewLife, Rainbow Light, Natural Vitality, NeoCell, and Stop Aging Now brands. It also provides grilling products under the Kingsford and Match Light brands; bags and wraps under the Glad brand; and cat litter products under the Fresh Step, Scoop Away, and Ever Clean brands. In addition, the company offers dressings and sauces primarily under the Hidden Valley brand; water-filtration systems and filters under the Brita brand; and natural personal care products under the Burt's Bees brand. Further, it markets its products under the Ayudin, Clorinda, and Poett brands. The company sells its products primarily through mass retailers, grocery outlets, warehouse clubs, dollar stores, home hardware centers, third-party and owned e-commerce channels, military stores, and distributors, as well as a direct sales force. The Clorox Company was founded in 1913 and is headquartered in Oakland, California.
 longName : The Clorox Company
 market : us_market
-marketCap : 27154950144
+marketCap : 27349067776
 maxAge : 1
 maxSupply : None
 messageBoardId : finmb_89450
@@ -82,16 +82,16 @@ pegRatio : 6.13
 phone : 510 271 7000
 previousClose : 212.98
 priceHint : 2
-priceToBook : 29.941624
-priceToSalesTrailing12Months : 4.040314
+priceToBook : 30.155663
+priceToSalesTrailing12Months : 4.069196
 profitMargins : 0.13971
 quoteType : EQUITY
-regularMarketDayHigh : 216.92
+regularMarketDayHigh : 217.31
 regularMarketDayLow : 212.59
 regularMarketOpen : 212.46
 regularMarketPreviousClose : 212.98
 regularMarketPrice : 212.46
-regularMarketVolume : 528051
+regularMarketVolume : 648417
 revenueQuarterlyGrowth : None
 sector : Consumer Defensive
 sharesOutstanding : 126050000
@@ -113,9 +113,9 @@ tradeable : False
 trailingAnnualDividendRate : 4.29
 trailingAnnualDividendYield : 0.020142736
 trailingEps : 7.36
-trailingPE : 29.270378
+trailingPE : 29.47962
 twoHundredDayAverage : 213.81908
-volume : 528051
+volume : 648417
 volume24Hr : None
 volumeAllCurrencies : None
 website : http://www.thecloroxcompany.com
@@ -130,8 +130,8 @@ address1 : One Microsoft Way
 algorithm : None
 annualHoldingsTurnover : None
 annualReportExpenseRatio : None
-ask : 223.75
-askSize : 1400
+ask : 223.71
+askSize : 800
 averageDailyVolume10Day : 36620850
 averageVolume : 31875047
 averageVolume10days : 36620850
@@ -147,7 +147,7 @@ companyOfficers : []
 country : United States
 currency : USD
 dateShortInterest : 1602720000
-dayHigh : 224.1
+dayHigh : 224.18
 dayLow : 218.03
 dividendRate : 2.24
 dividendYield : 0.01
@@ -167,7 +167,7 @@ fiveYearAverageReturn : None
 fiveYearAvgDividendYield : 1.78
 floatShares : 7448978653
 forwardEps : 7.46
-forwardPE : 30.009382
+forwardPE : 29.94906
 fromCurrency : None
 fullTimeEmployees : 163000
 fundFamily : None
@@ -189,7 +189,7 @@ logo_url : https://logo.clearbit.com/microsoft.com
 longBusinessSummary : Microsoft Corporation develops, licenses, and supports software, services, devices, and solutions worldwide. Its Productivity and Business Processes segment offers Office, Exchange, SharePoint, Microsoft Teams, Office 365 Security and Compliance, and Skype for Business, as well as related Client Access Licenses (CAL); Skype, Outlook.com, and OneDrive; LinkedIn that includes Talent, Learning, Sales, and Marketing solutions, as well as premium subscriptions; and Dynamics 365, a set of cloud-based and on-premises business solutions for small and medium businesses, large organizations, and divisions of enterprises. Its Intelligent Cloud segment licenses SQL and Windows Servers, Visual Studio, System Center, and related CALs; GitHub that provides a collaboration platform and code hosting service for developers; and Azure, a cloud platform. It also offers support services and Microsoft consulting services to assist customers in developing, deploying, and managing Microsoft server and desktop solutions; and training and certification to developers and IT professionals on various Microsoft products. Its More Personal Computing segment provides Windows original equipment manufacturer (OEM) licensing and other non-volume licensing of the Windows operating system; Windows Commercial, such as volume licensing of the Windows operating system, Windows cloud services, and other Windows commercial offerings; patent licensing; Windows Internet of Things; and MSN advertising. It also offers Surface, PC accessories, PCs, tablets, gaming and entertainment consoles, and other intelligent devices; Gaming, including Xbox hardware, and Xbox content and services; video games and third-party video game royalties; and Search, including Bing and Microsoft advertising. It sells its products through OEMs, distributors, and resellers; and directly through digital marketplaces, online stores, and retail stores. The company was founded in 1975 and is headquartered in Redmond, Washington.
 longName : Microsoft Corporation
 market : us_market
-marketCap : 1692569174016
+marketCap : 1689166938112
 maxAge : 1
 maxSupply : None
 messageBoardId : finmb_21835
@@ -206,16 +206,16 @@ pegRatio : 2.27
 phone : 425-882-8080
 previousClose : 223.29
 priceHint : 2
-priceToBook : 13.72365
-priceToSalesTrailing12Months : 11.505154
+priceToBook : 13.695826
+priceToSalesTrailing12Months : 11.482027
 profitMargins : 0.32285
 quoteType : EQUITY
-regularMarketDayHigh : 224.1
+regularMarketDayHigh : 224.18
 regularMarketDayLow : 218.03
 regularMarketOpen : 222.26
 regularMarketPreviousClose : 223.29
 regularMarketPrice : 222.26
-regularMarketVolume : 15711700
+regularMarketVolume : 17415690
 revenueQuarterlyGrowth : None
 sector : Technology
 sharesOutstanding : 7560500224
@@ -237,9 +237,9 @@ tradeable : False
 trailingAnnualDividendRate : 2.09
 trailingAnnualDividendYield : 0.009360025
 trailingEps : 6.199
-trailingPE : 36.113888
+trailingPE : 36.041298
 twoHundredDayAverage : 201.58354
-volume : 15711700
+volume : 17415690
 volume24Hr : None
 volumeAllCurrencies : None
 website : http://www.microsoft.com
