@@ -70,10 +70,8 @@ while True:
                 beta = v
     except KeyError:
         print("Sorry, that ticker does not exist. Please try again.")
-        # break
     except ImportError:
         print("Sorry, that ticker does not exist. Please try again.")
-        # break
     else:    
         current_stock_price = float(input('Enter current stock price:  '))
         expected_return = 0.08
