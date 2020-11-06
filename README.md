@@ -5,7 +5,8 @@ Overview
 
 This project is an "app" that can be used to determine if a stock is overvalued, undervalued, or at fair value using the Dividend Growth Model and CAPM model.
 It also provides the user with the latest recommendations from the current month for purchasing the stock. 
-The user has the ability to save the stock to their "favorites list."  If the stock is saved, additional comprehensive data is written into the favorites.csv file.
+The user has the ability to save the stock to their "favorites list."  The favorites list is displayed to the user before and after being prompted. 
+If the stock is saved, additional comprehensive data is written into the favorites.csv file.
 
 
 How it works   
