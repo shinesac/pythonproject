@@ -3,6 +3,8 @@ import math
 from datetime import datetime
 import yfinance as yf
 
+
+
 favorite_list = []
 
 
@@ -33,40 +35,45 @@ for a,b in bond_info:
     if a == "regularMarketPrice":
         risk_free_rate = float(b/100)
 
-
 while True:    
     ticker = input ('Enter your stock ticker symbol or type "exit" to exit the program:  ' )
+    # add error handling for non existing stock ticker
     if ticker == "exit":
         break
     stock = yf.Ticker(ticker)
     info = sorted([[k,v] for k,v in stock.info.items()])
     for k,v in info:
-        # print(f'{k} : {v}')
         if k == "beta":
             beta = v
     current_stock_price = float(input('Enter current stock price:  '))
     expected_return = 0.08
-   
+
     growth_rate = (sum(stock.dividends[str(last_year)]) - sum(stock.dividends[str(last_two_year)]))/sum(stock.dividends[str(last_two_year)])
     last_dividend = float(stock.dividends[-1])
     market_cap_rate = risk_free_rate + beta*(expected_return - risk_free_rate)
     valuation = last_dividend/(market_cap_rate - growth_rate)
     judge_stock()
+    # need to add error handling for no year, month data
     print(stock.recommendations[str(current_date.strftime('%Y-%m'))])
     favorite = input('Would you like to add ' + ticker + ' to your favorites list? y/n  ')
+    print('Favorites: {}'.format(favorite_list))
 
     if favorite == 'y':
         favorite_list.append(ticker)
+        print('Favorites: {}'.format(favorite_list))
+        file = open('favorites.csv', 'a')
+        info = sorted([[k,v] for k,v in stock.info.items()])
+        for k,v in info:
+            file.write(f'{k} : {v}' + "\n")
+        file.close()
     elif favorite == 'n':
         pass
 
-    print('Favorites: {}'.format(favorite_list))
 
     view_csv = input('To view in-depth stock data for items in your favorites list, enter "view", otherwise enter "pass":  ')
     if view_csv == "view":
-        open('favorites.csv', 'a')
+       file = open('favorites.csv', 'r') 
+       file.open()
+       file.close()
     elif view_csv == "pass":
         pass
-
-    # with open(favorites.csv, newline='') as csvfile:
-    #     stockreader = csv.reader(csvfie, delimeter= ':')
