@@ -70,39 +70,41 @@ while True:
                 beta = v
     except KeyError:
         print("Sorry, that ticker does not exist. Please try again.")
+        # break
     except ImportError:
         print("Sorry, that ticker does not exist. Please try again.")
+        # break
     else:    
         current_stock_price = float(input('Enter current stock price:  '))
         expected_return = 0.08
         market_cap_rate = risk_free_rate + beta*(expected_return - risk_free_rate)
-    try:
-        growth_rate = (sum(stock.dividends[str(last_year)]) - sum(stock.dividends[str(last_two_year)]))/sum(stock.dividends[str(last_two_year)])
-        last_dividend = float(stock.dividends[-1])
-        valuation = last_dividend/(market_cap_rate - growth_rate)
-    except ZeroDivisionError:
-        print("Sorry, this stock does not have a history of providing dividends. As such, this valuation model cannot be used.")  
-    except TypeError:
-        print("Sorry, this stock does not have a history of providing dividends. As such, this valuation model cannot be used.")
-    else:      
-        judge_stock()
+        try:
+            growth_rate = (sum(stock.dividends[str(last_year)]) - sum(stock.dividends[str(last_two_year)]))/sum(stock.dividends[str(last_two_year)])
+            last_dividend = float(stock.dividends[-1])
+            valuation = last_dividend/(market_cap_rate - growth_rate)
+        except ZeroDivisionError:
+            print("Sorry, this stock does not have a history of providing dividends. As such, this valuation model cannot be used.")  
+        except TypeError:
+            print("Sorry, this stock does not have a history of providing dividends. As such, this valuation model cannot be used.")
+        else:      
+            judge_stock()
 
 # feature 5: calculate and store data based on an external factor such as current date - the current date is grabbed earlier 
 # in the program and is used here to sift through API recommendation data to only display the data relevant to the current month and year.
-    try:  
-        print(stock.recommendations[str(current_date.strftime('%Y-%m'))])
-    except KeyError:
-        print("Sorry, this stock does not have any recommendations within the current month.")
-    except ImportError:
-        print("Sorry, there is nothing existing for " + ticker + ".")
-    else:    
+        try:  
+            print(stock.recommendations[str(current_date.strftime('%Y-%m'))])
+        except KeyError:
+            print("Sorry, this stock does not have any recommendations within the current month.")
+        except ImportError:
+            print("Sorry, there is nothing existing for " + ticker + ".")
+
         display_favorite_list()
 
 # feature 6: other feature - opens and writes data to external csv file. This only occurs if ticker is not already in the favorite list.
 # The data is sorted alphabetically and formated before being written to the file for "user-friendliness."
         if ticker not in favorite_list:
             favorite = input('Would you like to add ' + ticker + ' to your favorites list? y/n  ')
-            
+                
             if favorite == 'y':
                 favorite_list.append(ticker)
                 display_favorite_list()
