@@ -1,7 +1,9 @@
+import csv
 import math
 from datetime import datetime
 import yfinance as yf
 
+favorite_list = []
 
 
 current_date = datetime.now().date()
@@ -13,16 +15,25 @@ last_two_year = last_year - 1
 def judge_stock(): 
     if valuation < current_stock_price:
         print (ticker + ' Stock is OVERVALUED')
-        print (valuation)
+        # print (valuation)
     elif valuation > current_stock_price:
             print (ticker + ' Stock is UNDERVALUED')
-            print (valuation)
+            # print (valuation)
     else:
-            print (ticker + ' Stock is at fair value')
-            print (valuation)
+            print (ticker + ' Stock is at FAIR VALUE')
+  
+            # print (valuation)
+
+
+t_bond = yf.Ticker('^TNX')
+bond_info = sorted([[a,b] for a,b in t_bond.info.items()])
+for a,b in bond_info:
+    if a == "regularMarketPrice":
+        risk_free_rate = float(b/100)
+
 
 while True:    
-    ticker = input ('Enter your stock ticker symbol or type exit to exit the program:  ' )
+    ticker = input ('Enter your stock ticker symbol or type "exit" to exit the program:  ' )
     if ticker == "exit":
         break
     stock = yf.Ticker(ticker)
@@ -33,15 +44,34 @@ while True:
             beta = v
     current_stock_price = float(input('Enter current stock price:  '))
     expected_return = 0.08
-    for k,v in info:
-        if k == "regularMarketPrice":
-            risk_free_rate = v
+   
     growth_rate = (sum(stock.dividends[str(last_year)]) - sum(stock.dividends[str(last_two_year)]))/sum(stock.dividends[str(last_two_year)])
-    print (growth_rate)
+    # print (growth_rate)
     last_dividend = float(stock.dividends[-1])
     market_cap_rate = risk_free_rate + beta*(expected_return - risk_free_rate)
     valuation = last_dividend/(market_cap_rate - growth_rate)
     judge_stock()
-    print(stock.recommendations[str(current_date.strftime('%Y-%m'))])
+    # print(stock.recommendations[str(current_date.strftime('%Y-%m'))])
+    # favorite = input('Would you like to add ' + ticker + ' to your favorites list? y/n  ')
 
-    
+    # if favorite == 'y':
+    #     favorite_list.append(ticker)
+    # elif favorite == 'n':
+    #     pass
+
+    # print(favorite_list)
+
+    # view_csv = input('To view in-depth stock data for items in your favorites list, enter "view", otherwise enter "pass":  ')
+    # if view_csv == "view":
+    #     open('favorites.csv', 'a')
+    # elif view_csv == "pass":
+    #     pass
+
+    # with open(favorites.csv, newline='') as csvfile:
+    #     stockreader = csv.reader(csvfie, delimeter= ':')
+    print (growth_rate)
+    print(last_dividend)
+    print (market_cap_rate)
+    print(beta)
+    print(expected_return)
+    print(risk_free_rate)
