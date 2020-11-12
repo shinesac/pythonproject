@@ -61,6 +61,8 @@ Features included
 
 Suggestions on how to run
 
+*Program requires Python 3.8 or numpy 1.19.3 - Python 3.9.0 or numpy 1.19.4 will result in an error*
+
 1. pip install yfinance
 2. Download the python file and the csv file.
 3. Run the program in your console/terminal.
